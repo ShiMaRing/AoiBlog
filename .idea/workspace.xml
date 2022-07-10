@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/cmd/sql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/sql2struct/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/sql2struct/mysql_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/sql2struct/template.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/root.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/root.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/timer/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/timer/time.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +35,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2BhXIIsvQ77yHsN9r01ee82oGLB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,7 +61,27 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Go 测试.Aoi/internal/word 中的 TestCamelCaseUnderscore">
+  <component name="RunManager" selected="Go 测试.Aoi/internal/sql2struct 中的 TestDBModel_GetColumns">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="Aoi" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Aoi/internal/sql2struct 中的 TestDBModel_GetColumns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Aoi" />
+      <working_directory value="$PROJECT_DIR$/internal/sql2struct" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="Aoi/internal/sql2struct" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestDBModel_GetColumns\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="Aoi/internal/word 中的 TestCamelCaseUnderscore" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
       <working_directory value="$PROJECT_DIR$/internal/word" />
@@ -74,8 +106,18 @@
       <pattern value="^\QTestUnderscoreToUpperCamelCase\E$" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="Aoi" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.Aoi/internal/sql2struct 中的 TestDBModel_GetColumns" />
         <item itemvalue="Go 测试.Aoi/internal/word 中的 TestCamelCaseUnderscore" />
         <item itemvalue="Go 测试.Aoi/internal/word 中的 TestUnderscoreToUpperCamelCase" />
       </list>

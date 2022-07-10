@@ -6,7 +6,8 @@ import (
 
 // GetNowTime 获取当前时间
 func GetNowTime() time.Time {
-	return time.Now()
+	location, _ := time.LoadLocation("Asia/Shanghai")
+	return time.Now().In(location)
 }
 
 // GetCalTime 返回传入的时间累加上指定的时间结果
