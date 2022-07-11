@@ -8,7 +8,7 @@ App:
   MaxPageSize: 100
   DefaultContextTimeout: 60
   LogSavePath: storage/logs
-  LogFileName: app
+  LogFileName: aoi
   LogFileExt: .log
   UploadSavePath: storage/uploads
   UploadServerUrl: http://127.0.0.1:8000/static

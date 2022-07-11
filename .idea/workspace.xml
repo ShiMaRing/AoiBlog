@@ -4,34 +4,18 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="基于Gorm的sql转结构体工具">
-      <change afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global/setting.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/dao/base.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/dao/dao_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/article.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/common.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/tag.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/routers/api/v1/article.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/routers/api/v1/tag.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/errcode/common_code.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/errcode/errcode.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/setting/section.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="添加对配置文件读取支持">
+      <change afterPath="$PROJECT_DIR$/global/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/app/app.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/app/pagination.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/convert/convert.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/logger/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/sql.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/sql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/time.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/word.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/word.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/setting.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/sql2struct/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/sql2struct/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/sql2struct/mysql_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/sql2struct/mysql_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/sql2struct/template.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/sql2struct/template.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/timer/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/timer/time.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/timer/time_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/timer/time_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/word/word.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/word/word.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/word/word_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/word/word_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/mysql.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +158,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基于Gorm的sql转结构体工具" />
-    <option name="LAST_COMMIT_MESSAGE" value="基于Gorm的sql转结构体工具" />
+    <MESSAGE value="添加对配置文件读取支持" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加对配置文件读取支持" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

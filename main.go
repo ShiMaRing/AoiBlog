@@ -2,8 +2,11 @@ package main
 
 import (
 	"Aoi/global"
+	"Aoi/internal/dao"
 	"Aoi/internal/routers"
+	"Aoi/pkg/logger"
 	"Aoi/pkg/setting"
+	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"net/http"
 	"time"
@@ -12,11 +15,21 @@ import (
 var name string
 var set *setting.Setting
 
-func main() {
+func init() {
 	err := setupSetting()
 	if err != nil {
 		log.Fatalln(err)
 	}
+	err = setupDB()
+	if err != nil {
+		log.Fatalln(err)
+	}
+	_ = setupLogger()
+
+}
+
+func main() {
+
 	var servSetting = global.ServerSetting
 	router := routers.NewRouter()
 	server := &http.Server{
@@ -52,5 +65,25 @@ func setupSetting() error {
 	if err != nil {
 		return err
 	}
+	return nil
+}
+
+func setupDB() error {
+	var err error
+	global.Db, err = dao.GetDB()
+	if err != nil {
+		return err
+	}
+	return nil
+}
+func setupLogger() error {
+	fileName := global.AppSetting.LogSavePath + "/" + global.AppSetting.LogFileName + global.AppSetting.LogFileExt
+	global.Logger = logger.NewLogger(&lumberjack.Logger{
+		Filename:  fileName,
+		MaxSize:   100,
+		MaxAge:    10,
+		LocalTime: true,
+		Compress:  false,
+	}, "", log.LstdFlags).WithCaller(0) //表示前缀出现在logger header尾部
 	return nil
 }
