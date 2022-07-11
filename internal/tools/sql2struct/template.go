@@ -1,7 +1,7 @@
 package sql2struct
 
 import (
-	"Aoi/internal/word"
+	"Aoi/internal/tools/word"
 	"fmt"
 	"html/template"
 	"os"

@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"Aoi/internal/word"
+	"Aoi/internal/tools/word"
 	"github.com/spf13/cobra"
 	"log"
 )

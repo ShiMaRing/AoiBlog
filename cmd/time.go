@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"Aoi/internal/timer"
+	"Aoi/internal/tools/timer"
 	"github.com/spf13/cobra"
 	"log"
 	"strings"
