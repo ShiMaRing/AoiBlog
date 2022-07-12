@@ -27,14 +27,12 @@ func GetDB() (*gorm.DB, error) {
 	var err error
 	var databaseSetting = global.DatabaseSetting
 	//根据配置文件解析
-
 	dsn := "%s:%s@tcp(%s)/aoi?charset=%s&parseTime=True&loc=Local"
 	dsn = fmt.Sprintf(dsn,
 		databaseSetting.UserName,
 		databaseSetting.Password,
 		databaseSetting.Host,
 		databaseSetting.Charset)
-
 	//配置日志参数
 	newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer（日志输出的目标，前缀和日志包含的内容——译者注）

@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="完成日志、分页等基础组件">
-      <change afterPath="$PROJECT_DIR$/internal/service/article.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/service/tag.go" afterDir="false" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="集成swagger">
+      <change afterPath="$PROJECT_DIR$/internal/dao/dao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/model/tag_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/errcode/module_code.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/article.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/mysql.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/tag.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/tag.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/app/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/app/app.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,61 +81,61 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="Aoi/internal/dao 中的 TestCreateTables" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Aoi/internal/model 中的 TestTagCount" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/internal/dao" />
+      <working_directory value="$PROJECT_DIR$/internal/model" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="Aoi/internal/dao" />
+      <package value="Aoi/internal/model" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCreateTables\E$" />
+      <pattern value="^\QTestTagCount\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Aoi/internal/sql2struct 中的 TestDBModel_GetColumns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Aoi/internal/model 中的 TestTagCreate" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/internal/sql2struct" />
+      <working_directory value="$PROJECT_DIR$/internal/model" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="Aoi/internal/sql2struct" />
+      <package value="Aoi/internal/model" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestDBModel_GetColumns\E$" />
+      <pattern value="^\QTestTagCreate\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Aoi/internal/word 中的 TestCamelCaseUnderscore" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Aoi/internal/model 中的 TestTagList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/internal/word" />
+      <working_directory value="$PROJECT_DIR$/internal/model" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="Aoi/internal/word" />
+      <package value="Aoi/internal/model" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCamelCaseUnderscore\E$" />
+      <pattern value="^\QTestTagList\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Aoi/internal/word 中的 TestUnderscoreToUpperCamelCase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Aoi/internal/model 中的 TestTagUpdate" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/internal/word" />
+      <working_directory value="$PROJECT_DIR$/internal/model" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="Aoi/internal/word" />
+      <package value="Aoi/internal/model" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestUnderscoreToUpperCamelCase\E$" />
+      <pattern value="^\QTestTagUpdate\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go 构建.go build Aoi" />
-        <item itemvalue="Go 测试.Aoi/internal/dao 中的 TestCreateTables" />
-        <item itemvalue="Go 测试.Aoi/internal/sql2struct 中的 TestDBModel_GetColumns" />
-        <item itemvalue="Go 测试.Aoi/internal/word 中的 TestCamelCaseUnderscore" />
-        <item itemvalue="Go 测试.Aoi/internal/word 中的 TestUnderscoreToUpperCamelCase" />
+        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagList" />
+        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagUpdate" />
+        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagCreate" />
+        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagCount" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +158,8 @@
     <MESSAGE value="基于Gorm的sql转结构体工具" />
     <MESSAGE value="添加对配置文件读取支持" />
     <MESSAGE value="完成日志、分页等基础组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成日志、分页等基础组件" />
+    <MESSAGE value="集成swagger" />
+    <option name="LAST_COMMIT_MESSAGE" value="集成swagger" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

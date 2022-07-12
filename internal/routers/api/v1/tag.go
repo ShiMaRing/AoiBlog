@@ -1,6 +1,14 @@
 package v1
 
-import "github.com/gin-gonic/gin"
+import (
+	"Aoi/global"
+	"Aoi/internal/service"
+	"Aoi/pkg/app"
+	"Aoi/pkg/convert"
+	"Aoi/pkg/errcode"
+	"context"
+	"github.com/gin-gonic/gin"
+)
 
 //定义Tag应当暴露的接口
 
@@ -21,7 +29,26 @@ func NewTag() Tag {
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags [get]
-func (t Tag) List(c *gin.Context) {}
+func (t Tag) List(c *gin.Context) {
+	req := service.TagReq{}
+	response := app.NewResponse(c)
+	err := c.ShouldBind(&req)
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "bind fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	newService := service.NewService(c)
+	list, err := newService.GetList(&req)
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "get tag list fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	response.ToResponseList(list)
+}
 
 // @Summary 新增标签
 // @Produce  json
@@ -32,7 +59,26 @@ func (t Tag) List(c *gin.Context) {}
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags [post]
-func (t Tag) Create(c *gin.Context) {}
+func (t Tag) Create(c *gin.Context) {
+	req := service.TagReq{}
+	response := app.NewResponse(c)
+	err := c.ShouldBind(&req)
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "bind fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	newService := service.NewService(c)
+	err = newService.CreateTag(&req)
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "create tag list fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	response.ToResponse("create success!")
+}
 
 // @Summary 更新标签
 // @Produce  json
@@ -44,7 +90,28 @@ func (t Tag) Create(c *gin.Context) {}
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags/{id} [put]
-func (t Tag) Update(c *gin.Context) {}
+func (t Tag) Update(c *gin.Context) {
+	req := service.TagReq{}
+	response := app.NewResponse(c)
+	err := c.ShouldBind(&req)
+	req.ID = convert.StrTo(c.Param("id")).MustUInt32()
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "bind fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	newService := service.NewService(c)
+	err = newService.UpdateTag(&req)
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "Update tag list fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	response.ToResponse("Update success!")
+
+}
 
 // @Summary 删除标签
 // @Produce  json
@@ -53,4 +120,24 @@ func (t Tag) Update(c *gin.Context) {}
 // @Failure 400 {object} errcode.Error "请求错误"
 // @Failure 500 {object} errcode.Error "内部错误"
 // @Router /api/v1/tags/{id} [delete]
-func (t Tag) Delete(c *gin.Context) {}
+func (t Tag) Delete(c *gin.Context) {
+	req := service.TagReq{}
+	response := app.NewResponse(c)
+	err := c.ShouldBind(&req)
+	req.ID = convert.StrTo(c.Param("id")).MustUInt32()
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "bind fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	newService := service.NewService(c)
+	err = newService.DeleteTag(&req)
+	if err != nil {
+		global.Logger.Errorf(context.Background(), "Delete tag list fail with %v", err)
+		detail := errcode.InvalidParams.WithDetail(err.Error())
+		response.ToErrorResponse(detail)
+		return
+	}
+	response.ToResponse("Delete success!")
+}
