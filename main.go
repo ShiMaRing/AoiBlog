@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "Aoi/docs"
 	"Aoi/global"
 	"Aoi/internal/dao"
 	"Aoi/internal/routers"
@@ -28,6 +29,9 @@ func init() {
 
 }
 
+//@title AoiBlog
+//@version 1.0
+//@description Aoi博客
 func main() {
 
 	var servSetting = global.ServerSetting

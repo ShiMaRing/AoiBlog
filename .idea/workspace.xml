@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="添加对配置文件读取支持">
-      <change afterPath="$PROJECT_DIR$/global/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/app/app.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/app/pagination.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/convert/convert.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/logger/logger.go" afterDir="false" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="完成日志、分页等基础组件">
+      <change afterPath="$PROJECT_DIR$/internal/service/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/service/tag.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/setting.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/mysql.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/article.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/tag.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +156,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="基于Gorm的sql转结构体工具" />
     <MESSAGE value="添加对配置文件读取支持" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加对配置文件读取支持" />
+    <MESSAGE value="完成日志、分页等基础组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成日志、分页等基础组件" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
