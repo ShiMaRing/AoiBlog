@@ -13,7 +13,7 @@ func TestTagCount(t *testing.T) {
 		Name:  "aa",
 		State: 1,
 	}
-	var db, _ = dbs()
+	var db, _ = Dbs()
 	count, _ := tag.Count(db)
 	fmt.Println(count)
 
@@ -24,12 +24,12 @@ func TestTagList(t *testing.T) {
 		Name:  "aa",
 		State: 1,
 	}
-	var db, _ = dbs()
+	var db, _ = Dbs()
 	count, _ := tag.List(db, 0, 1)
 	fmt.Println(count)
 }
 
-func dbs() (*gorm.DB, error) {
+func Dbs() (*gorm.DB, error) {
 	var err error
 	var dataset = setting.DatabaseSettingS{
 		DBType:   "mysql",
@@ -61,7 +61,7 @@ func TestTagCreate(t *testing.T) {
 		Name:  "mm",
 		State: 1,
 	}
-	var db, _ = dbs()
+	var db, _ = Dbs()
 	err := tag.Create(db)
 	t.Log(err)
 
@@ -73,8 +73,17 @@ func TestTagUpdate(t *testing.T) {
 		Name:  "qqqqq",
 		State: 0,
 	}
-	var db, _ = dbs()
+	var db, _ = Dbs()
 	err := tag.Update(db)
 	t.Log(err)
 
+}
+
+func TestAuth_Add(t *testing.T) {
+	auth := Auth{
+		AppKey:    "hello",
+		AppSecret: "world",
+	}
+	var db, _ = Dbs()
+	auth.Add(db)
 }

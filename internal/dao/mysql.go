@@ -15,7 +15,7 @@ import (
 // CreateTables 对表进行创建
 func CreateTables() error {
 	db, _ := GetDB()
-	err := db.AutoMigrate(&model.Article{})
+	err := db.AutoMigrate(&model.Auth{})
 	if err != nil {
 		return err
 	}
@@ -26,6 +26,7 @@ func CreateTables() error {
 func GetDB() (*gorm.DB, error) {
 	var err error
 	var databaseSetting = global.DatabaseSetting
+
 	//根据配置文件解析
 	dsn := "%s:%s@tcp(%s)/aoi?charset=%s&parseTime=True&loc=Local"
 	dsn = fmt.Sprintf(dsn,
