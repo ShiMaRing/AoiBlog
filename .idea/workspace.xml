@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="集成swagger">
-      <change afterPath="$PROJECT_DIR$/internal/dao/dao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/tag_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/service/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/errcode/module_code.go" afterDir="false" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="完成标签的增删查改操作">
+      <change afterPath="$PROJECT_DIR$/internal/routers/upload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/service/upload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/upload/file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/util/md5.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/util/md5_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/api/v1/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/api/v1/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/app/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/app/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
       <recent name="C:\Users\LENOVO\Desktop\GoProject\Aoi\internal\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build Aoi">
+  <component name="RunManager" selected="Go 构建.go build main.go">
     <configuration name="go build Aoi" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
       <working_directory value="$PROJECT_DIR$" />
@@ -81,28 +79,13 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="Aoi/internal/model 中的 TestTagCount" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/internal/model" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="Aoi/internal/model" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="Aoi" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestTagCount\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Aoi/internal/model 中的 TestTagCreate" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/internal/model" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="Aoi/internal/model" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestTagCreate\E$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="Aoi/internal/model 中的 TestTagList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -129,13 +112,25 @@
       <pattern value="^\QTestTagUpdate\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="Aoi/pkg/util 中的 TestEncodeMD5" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Aoi" />
+      <working_directory value="$PROJECT_DIR$/pkg/util" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="Aoi/pkg/util" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestEncodeMD5\E$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 构建.go build main.go" />
+        <item itemvalue="Go 测试.Aoi/pkg/util 中的 TestEncodeMD5" />
         <item itemvalue="Go 构建.go build Aoi" />
         <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagList" />
         <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagUpdate" />
-        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagCreate" />
-        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestTagCount" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +154,8 @@
     <MESSAGE value="添加对配置文件读取支持" />
     <MESSAGE value="完成日志、分页等基础组件" />
     <MESSAGE value="集成swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="集成swagger" />
+    <MESSAGE value="完成标签的增删查改操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成标签的增删查改操作" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
