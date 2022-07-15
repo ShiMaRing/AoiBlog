@@ -8,20 +8,23 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"net/http"
+	"time"
 )
 
 //提供路由
 
 func NewRouter() *gin.Engine {
 	r := gin.New()
-	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
+	r.Use(gin.Logger())
 	r.Use(middleware.AccessLog())
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	upload := NewUpload()
 	r.POST("/upload", upload.UploadFile)
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 	r.GET("/auth", v1.GetAuth)
+	r.Use(middleware.ContextTimeout(time.Second))
+
 	article := v1.NewArticle()
 	tag := v1.NewTag()
 

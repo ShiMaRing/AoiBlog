@@ -32,6 +32,16 @@ type MethodLimiter struct {
 // GetBucket 尝试去取桶，并尝试能否取到，每一个url作为键
 func (l MethodLimiter) GetBucket(key string) (*ratelimit.Bucket, bool) {
 	bucket, ok := l.LimiterBuckets[key]
+	//如果取不到就添加桶
+	if !ok {
+		rule := LimiterBucketRule{
+			Key:          key,
+			FillInterval: time.Second,
+			Capacity:     100,
+			Quantum:      10,
+		}
+		l.AddBuckets(rule)
+	}
 	return bucket, ok
 }
 
