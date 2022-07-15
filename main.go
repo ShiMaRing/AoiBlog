@@ -74,6 +74,11 @@ func setupSetting() error {
 		return err
 	}
 	global.JWTSetting.Expire *= time.Second //7200秒
+
+	err = set.ReadSection("Email", &global.EmailSetting)
+	if err != nil {
+		return err
+	}
 	return nil
 }
 

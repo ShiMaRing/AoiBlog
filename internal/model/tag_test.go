@@ -2,6 +2,7 @@ package model
 
 import (
 	"Aoi/pkg/setting"
+	"encoding/base64"
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -86,4 +87,35 @@ func TestAuth_Add(t *testing.T) {
 	}
 	var db, _ = Dbs()
 	auth.Add(db)
+}
+func TestDecodeJwt(t *testing.T) {
+	jwt := `eyJhcHBLZXkiOiJoZWxsbyIsImFwcFNlY3JldCI6IndvcmxkIiwiZXhwIjoxNjU3ODE1MzA3LCJpc3MiOiJibG9nLXNlcnZpY2UifQ`
+	decodeString, err := base64.StdEncoding.DecodeString(jwt)
+	if err != nil {
+		t.Error(err)
+	}
+	t.Log(string(decodeString))
+
+}
+
+func TestRecover(t *testing.T) {
+	f := Recover(t)
+	for i := 0; i < 10; i++ {
+		if i == 8 {
+			f()
+		} else if i == 4 {
+			panic("hello")
+		}
+	}
+
+}
+func Recover(t *testing.T) func() {
+	return func() {
+		defer func() {
+			err := recover()
+			if err != nil {
+				t.Logf("catch error : %v \n", err)
+			}
+		}()
+	}
 }

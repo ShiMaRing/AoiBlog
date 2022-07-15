@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="完成服务器提交文件功能">
-      <change afterPath="$PROJECT_DIR$/internal/dao/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/middleware/jwt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/routers/api/v1/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/service/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/app/jwt.go" afterDir="false" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="项目添加jwt校验">
+      <change afterPath="$PROJECT_DIR$/internal/middleware/access_log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/middleware/recov.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/email/email.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/setting.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/dao_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/dao_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/mysql.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/model/tag_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/tag_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
@@ -86,15 +82,6 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="Aoi" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <method v="2" />
-    </configuration>
     <configuration name="Aoi/internal/dao 中的 TestCreateTables" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
       <working_directory value="$PROJECT_DIR$/internal/dao" />
@@ -119,25 +106,37 @@
       <pattern value="^\QTestAuth_Add\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Aoi/pkg/util 中的 TestEncodeMD5" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Aoi/internal/model 中的 TestDecodeJwt" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/pkg/util" />
+      <working_directory value="$PROJECT_DIR$/internal/model" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="Aoi/pkg/util" />
+      <package value="Aoi/internal/model" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestEncodeMD5\E$" />
+      <pattern value="^\QTestDecodeJwt\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Aoi/internal/model 中的 TestRecover" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Aoi" />
+      <working_directory value="$PROJECT_DIR$/internal/model" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="Aoi/internal/model" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRecover\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go 构建.go build Aoi" />
+        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestRecover" />
+        <item itemvalue="Go 测试.Aoi/internal/model 中的 TestDecodeJwt" />
         <item itemvalue="Go 测试.Aoi/internal/model 中的 TestAuth_Add" />
         <item itemvalue="Go 测试.Aoi/internal/dao 中的 TestCreateTables" />
-        <item itemvalue="Go 构建.go build main.go" />
-        <item itemvalue="Go 测试.Aoi/pkg/util 中的 TestEncodeMD5" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +162,8 @@
     <MESSAGE value="集成swagger" />
     <MESSAGE value="完成标签的增删查改操作" />
     <MESSAGE value="完成服务器提交文件功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成服务器提交文件功能" />
+    <MESSAGE value="项目添加jwt校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目添加jwt校验" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
