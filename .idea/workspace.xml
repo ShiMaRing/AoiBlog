@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="项目添加jwt校验">
-      <change afterPath="$PROJECT_DIR$/internal/middleware/access_log.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/middleware/recov.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/email/email.go" afterDir="false" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="支持panic邮箱发送">
+      <change afterPath="$PROJECT_DIR$/internal/middleware/limiter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/limiter/limiter.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/setting.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/tag_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/tag_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +157,8 @@
     <MESSAGE value="完成标签的增删查改操作" />
     <MESSAGE value="完成服务器提交文件功能" />
     <MESSAGE value="项目添加jwt校验" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目添加jwt校验" />
+    <MESSAGE value="支持panic邮箱发送" />
+    <option name="LAST_COMMIT_MESSAGE" value="支持panic邮箱发送" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
