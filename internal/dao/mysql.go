@@ -56,5 +56,6 @@ func GetDB() (*gorm.DB, error) {
 	s, _ := db.DB()
 	s.SetMaxIdleConns(databaseSetting.MaxIdleConns)
 	s.SetMaxOpenConns(databaseSetting.MaxOpenConns)
+
 	return db, nil
 }

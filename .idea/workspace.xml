@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="添加流量控制功能">
-      <change afterPath="$PROJECT_DIR$/internal/middleware/timeout.go" afterDir="false" />
+    <list default="true" id="ab3dc8a0-5df9-4fc2-b486-c7b4530522ae" name="变更" comment="添加超时控制">
+      <change afterPath="$PROJECT_DIR$/configs/config_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global/tracer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/middleware/tracer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/tracer/tracer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/mysql.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/limiter/limiter.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/limiter/limiter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/setting/section.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/section.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,16 +84,16 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="Aoi/internal/dao 中的 TestCreateTables" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Aoi/configs 中的 TestFileWatcher" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Aoi" />
-      <working_directory value="$PROJECT_DIR$/internal/dao" />
+      <working_directory value="$PROJECT_DIR$/configs" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="Aoi/internal/dao" />
+      <package value="Aoi/configs" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCreateTables\E$" />
+      <pattern value="^\QTestFileWatcher\E$" />
       <method v="2" />
     </configuration>
     <configuration name="Aoi/internal/model 中的 TestAuth_Add" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -126,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go 构建.go build Aoi" />
+        <item itemvalue="Go 测试.Aoi/configs 中的 TestFileWatcher" />
         <item itemvalue="Go 测试.Aoi/internal/model 中的 TestRecover" />
         <item itemvalue="Go 测试.Aoi/internal/model 中的 TestDecodeJwt" />
         <item itemvalue="Go 测试.Aoi/internal/model 中的 TestAuth_Add" />
-        <item itemvalue="Go 测试.Aoi/internal/dao 中的 TestCreateTables" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +167,8 @@
     <MESSAGE value="项目添加jwt校验" />
     <MESSAGE value="支持panic邮箱发送" />
     <MESSAGE value="添加流量控制功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加流量控制功能" />
+    <MESSAGE value="添加超时控制" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加超时控制" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

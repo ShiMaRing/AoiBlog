@@ -15,6 +15,7 @@ import (
 
 func NewRouter() *gin.Engine {
 	r := gin.New()
+	r.Use(middleware.Tracing())
 	r.Use(gin.Recovery())
 	r.Use(gin.Logger())
 	r.Use(middleware.AccessLog())
