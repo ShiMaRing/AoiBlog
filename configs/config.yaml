@@ -20,12 +20,12 @@ App:
 Email:
   Host: smtp.qq.com
   Port: 465
-  UserName: 3578379415@qq.com
-  Password: eybmpvedzwkjdaff
+  UserName: xxxxx@qq.com
+  Password:xxxxxx
   IsSSL: true
-  From: 3578379415@qq.com
+  From: xxxxxx@qq.com
   To:
-    - 1150840779@qq.com
+    - xxxxxx@qq.com
 JWT:
   Secret: eddycjy
   Issuer: blog-service
